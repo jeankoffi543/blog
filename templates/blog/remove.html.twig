@@ -1,0 +1,24 @@
+{% extends "base.html.twig" %}
+    {% block title %}
+        Modifier| {{ parent() }}
+    {% endblock %}
+    
+    {% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-8 mx-auto">
+                <h1>Suppression de l'article: {{ slug }} </h1>
+                <input type="file" class="form-control">
+                <input type="text" placeholder="titre" class="form-control">
+                <input type="text" placeholder="categorie" class="form-control">
+                <textarea  rows="5" class="form-control" placeholder="description"></textarea>
+                <div class="form-group d-flex">
+                    <input type="checkbox" id="published" class="form-check">
+                    <label class="form-label" for="#published"> Publier</label> 
+                </div>
+                <input type="submit" value="Valider" class="form-control">
+
+            </div>
+        </div>
+    </div>
+    {% endblock %}
